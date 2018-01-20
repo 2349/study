@@ -17,7 +17,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://2349.github.io/study/hottie/03.NOMADE/movie_app",
+  "homepage": "https://2349.github.io/study",
   "devDependencies": {
     "gh-pages": "^1.1.0"
   }
