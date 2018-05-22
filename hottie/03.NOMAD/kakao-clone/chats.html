@@ -7,7 +7,7 @@
 	<meta name="description" content="Welcome to my kakao Clone" >
 	<meta name="author" content="Nomad Coders">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-	<title>Friends</title>
+	<title>Chats</title>
 </head>
 <body>
 	<header>
@@ -27,59 +27,51 @@
 		</div>
 		<div class="header__bottom">
 			<div class="header__column">
-				<span class="header__text">Manage</span>
+				<span class="header__text">Edit</span>
 			</div>
 			<div class="header__column">
-				<span class="header__text">Friends <span class="header__number">1</span></span>
+				<span class="header__text">Charts <i class="fa fa-caret-down"></i></span>
 			</div>
-			<div class="header__column">
-				<i class="fa fa-cog fa-lg"></i>
-			</div>
+			<div class="header__column"></div>
 		</div>
 	</header>
-	<main class="friends">
+	<main class="chats">
 		<div class="search-bar">
 			<i class="fa fa-search"></i>
 			<input type="text" placeholder="Find friends, chats, Plus Friends" />
 		</div>
-		<section class="friends__section">
-			<header class="friends__section-header">
-				<h6 class="friends__section-title">My Profile</h6>
-			</header>
-			<div class="friends__section-rows">
-				<div class="friends__section-row">
-					<img src="" alt="">
-					<span class="friends__section-name">hottie</span>
-				</div>
-				<div class="friends__section-row">
-					<img src="" alt="">
-					<span class="friends__section-name">Friends' Names Display</span>
-				</div>
-			</div>
-		</section>
-		<section class="friends__section">
-			<header class="friends__section-header">
-				<h6 class="friends__section-title">Friends</h6>
-			</header>
-			<div class="friends__section-rows">
-				<div class="friends__section-row">
-					<div class="friends__section_column">
-						<img src="" alt="">
-						<span class="friends__section-name">hottie</span>
+		<ul class="chats__list">
+			<li class="chats__chat">
+				<div class="chat__content">
+					<img src="images/avatar.jpg"/>
+					<div class="chat__preview">
+						<h3 class="chat__user">Lynn</h3>
+						<span class="chat__last-message">Hello. This is a test message.</span>
 					</div>
-					<span class="friends__section-tagline">
-						Life is short. So live your life.
-					</span>
 				</div>
-			</div>
-		</section>
+				<span class="chat__date-time">15:55</span>
+			</li>
+			<li class="chats__chat">
+				<div class="chat__content">
+					<img src="images/avatar.jpg"/>
+					<div class="chat__preview">
+						<h3 class="chat__user">KakaoTalk</h3>
+						<span class="chat__last-message">You logged into KakaoTalk PC from the PC</span>
+					</div>
+				</div>
+				<span class="chat__date-time">Jul 29</span>
+			</li>
+		</ul>
+		<div class="chat-btn">
+			<i class="fa fa-comment"></i>
+		</div>
 	</main>
 	<nav class="tab-bar">
-		<a href="index.html" class="tab-bar__tab tab-bar__tab-selected">
+		<a href="index.html" class="tab-bar__tab">
 			<i class="fa fa-user"></i><span class="tab-bar__title">Friends</span>
 		</a>
-		<a href="chats.html" class="tab-bar__tab">
-			<i class="fa fa-comment"></i><span class="tab-bar__title">chats</span>
+		<a href="chats.html" class="tab-bar__tab tab-bar__tab-selected">
+			<i class="fa fa-comment"></i><span class="tab-bar__title">Chats</span>
 		</a>
 		<a href="find.html" class="tab-bar__tab">
 			<i class="fa fa-search"></i><span class="tab-bar__title">Find</span>
