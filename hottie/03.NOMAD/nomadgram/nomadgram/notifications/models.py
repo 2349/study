@@ -13,10 +13,10 @@ class Notification(image_models.TimeStampedModel):
         ('follow', 'Follow')
     )
 
-    creator = models.ForeignKey(user_models.User, related_name='creator')
-    to = models.ForeignKey(user_models.User, related_name='to')
+    creator = models.ForeignKey(user_models.User, related_name='creator', on_delete=models.PROTECT)
+    to = models.ForeignKey(user_models.User, related_name='to', on_delete=models.PROTECT)
     notification_type = models.CharField(max_length=20, choices=TYPE_CHOICES)
-    image = models.ForeignKey(image_models.Image, null=True, blank=True)
+    image = models.ForeignKey(image_models.Image, null=True, blank=True, on_delete=models.PROTECT)
     comment = models.TextField(null=True, blank=True)
 
     class Meta:

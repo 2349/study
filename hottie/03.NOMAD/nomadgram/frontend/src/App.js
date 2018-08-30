@@ -1,21 +1,47 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Route, Link } from 'react-router-dom';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
-}
+const App = () => (
+  <div>
+    <Header />
+  </div>
+);
+
+const Header = () => (
+  <header>
+    <h1>My Contacts</h1>
+    <ul>
+      <li><Link to='/'>home</Link></li>
+      <li><Link to='/contacts'>contacts</Link></li>
+    </ul>
+    
+    <Route exact path="/" component={ Welcome } />
+    <Route path="/contacts" component={ Contacts } />
+  </header>
+);
+
+const Welcome = () => <h1>Welcome to the best contacts app!</h1>;
+
+const Contacts = ({ match }) => (
+  <div>
+    <ul>
+      <li><Link to='/contacts/a'>A</Link></li>
+      <li><Link to='/contacts/b'>B</Link></li>
+      <li><Link to='/contacts/c'>C</Link></li>
+    </ul>
+
+    <Route 
+      exact
+      path={ `${ match.path }` }
+      render={() => <h3>Please select a contacts</h3>}
+    />
+    <Route
+      path={ `${ match.path }/:contactName` }
+      component={ Contact }
+    />
+  </div>
+);
+
+const Contact = ({ match }) => `Your friends name is ${ match.params.contactName }`;
 
 export default App;
